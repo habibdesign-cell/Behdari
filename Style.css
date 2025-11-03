@@ -1,0 +1,471 @@
+:root {
+  --primary: #70A1FF;
+  --alert: #FF4757;
+  --caution: #FFA502;
+  --success: #2ED573;
+
+  --g10: #F2F4F8;
+  --g20: #DDE1E6;
+  --g30: #C1C7CD;
+  --g40: #A2A9B0;
+  --g50: #878D96;
+  --g60: #697077;
+  --g70: #4D5358;
+  --g80: #343A3F;
+  --g90: #21272A;
+  --g100: #121619;
+
+  --base: #FFFFFF;
+  --w: #F2F4F8;
+}
+
+@font-face {
+  font-family: 'iransans';
+  src: url(../ttf/IRANSansFaNum.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'iransans';
+  font-weight: 500;
+  src: url(../ttf/IRANSansFaNum_Medium.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'iransans';
+  font-weight: 900;
+  src: url(../ttf/IRANSansFaNum_Bold.ttf) format('truetype');
+}
+
+@font-face {
+  font-family: 'kalameh';
+  src: url(../ttf/kalameh_Bold.ttf) format('truetype');
+}
+
+
+.fb-14{
+  font-family: 'iransans';
+  font-size: 14px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.input-group:focus-within {
+    border: 1px solid var(--primary); /* Custom border for the input group */
+    border-radius: 8px;  /* Optional: Match Bootstrap's border radius */
+}
+
+.openedForm
+   {
+      display:block !important;
+   }
+
+select:focus{
+  border: 1px solid var(--primary); /* Custom border for the input group */
+  border-radius: 8px;  /* Optional: Match Bootstrap's border radius */
+}
+
+select{
+  border-radius: 8px !important;
+}
+
+
+.animation-fade{
+  opacity: 0;
+  animation-name: fade-in;
+  animation-duration: 2s;
+  animation-fill-mode: forwards
+}
+
+.animation-pop{
+  transform: scale(0,0);
+  animation-name: pop-in;
+  animation-duration: 2s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes pop-in {
+  from {
+    transform: scale(0,0);
+  }
+  to {
+    transform: scale(1,1);
+  }
+}
+
+@-webkit-keyframes fade-in {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0
+  }
+  to {
+    opacity: 1
+  }
+}
+
+
+input.form-control-simple:focus{
+  border: solid 1px var(--primary) !important;
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.form-control-simple {
+  position: relative;
+  display: inline-block;
+  min-width: 300px;
+  margin-left: 16px;
+}
+.form-control-simple input.form-control-simple {
+  padding-left: 120px; /* space for placeholder */
+  text-align: right; /* input text on right */
+}
+.form-control-simple .placeholder-text {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #6c757d;
+  pointer-events: none;
+  font-size: 14px;
+  transition: 0.3s ease all;
+  user-select: none;
+}
+.form-control-simple input.form-control-simple:focus + .placeholder-text,
+.form-control-simple input.form-control-simple:not(:placeholder-shown) + .placeholder-text {
+  color: #495057;
+}
+
+.display-1{
+  font-family: 'kalameh';
+  font-weight: bold;
+  color: var(--g80);
+  font-size: 56px;
+  line-height: 46px;
+}
+
+button{
+  font-family: 'iransans';
+  font-size: 16px;
+  padding: 16px 40px;
+  background: var(--primary);
+  color: var(--base);
+  border: none;
+  border-radius: 8px;
+}
+
+button:hover{
+  border: solid 1.5px var(--primary);
+  color: var(--primary);
+  background-color: var(--w);
+}
+
+.dropdown{
+  left: auto !important;
+}
+.dropdown-menu{
+  width: auto !important;
+  text-align: right;
+}
+
+#form-container {
+  display: none;
+  visibility: hidden;
+  transform: translateY(-20px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+#form-container.active {
+  display: flex;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.btn-small{
+  font-size: 14px;
+  padding: 0px 24px;
+  border: solid 1px var(--primary);
+  color: var(--primary);
+  background-color: var(--w);
+}
+
+
+.btn-type{
+  border: solid 1px var(--primary);
+  color: var(--primary);
+  background-color: var(--w);
+}
+
+
+.display-2{
+  font-family: 'iransans';
+  font-weight: 500;
+  letter-spacing: -0.5px;
+  font-size: 21px;
+  line-height: 32px !important;
+}
+
+.display-3{
+  font-family: 'iransans';
+  font-weight: 900;
+  font-size: 48px;
+  text-align: left;
+}
+
+.display-4{
+  font-family: 'iransans';
+  font-weight: 500;
+  font-size: 40px;
+  text-align: left;
+}
+
+.fb-12{
+  font-family: 'iransans';
+  font-size: 12px;
+}
+
+.fb-16{
+  font-family: 'iransans';
+  font-size: 16px;
+}
+
+.g60{
+  color: var(--g60) !important;
+}
+
+.g100{
+  color: var(--g100) !important;
+}
+
+.alertc{
+  color: var(--alert) !important;
+}
+
+tr{
+  line-height: 32px !important;
+}
+
+.primaryc{
+  color: var(--primary) !important;
+}
+
+.cautionc{
+  color: var(--caution) !important;
+}
+
+.successc{
+  color: var(--success) !important;
+}
+
+.badgemedal{
+  background: rgba(66, 66, 66, 0.1);
+  padding: 4px 12px;
+  border-radius: 500px;
+}
+
+tbody, td, tfoot, th, thead, tr{
+  align-content: center;
+}
+
+tr{
+  width: 100%;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show>.nav-link{
+  color: var(--primary) !important;
+  background: var(--w) !important;
+}
+
+.nav-link.active::before{
+  content: " ";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--primary);
+  display: inline-block;
+  margin-left: 12px;
+}
+
+.input-group-text{
+  background-color: var(--base);
+  border-radius: 0px 8px 8px 0px;
+  border-left: none;
+}
+
+.input-group-texts{
+  background-color: var(--base);
+  border-radius: 8px;
+}
+
+input:focus{
+  border: none !important;
+}
+
+input.form-control{
+  font-family: 'iransans';
+  font-size: 14px;
+  border-right: none;
+  border-radius: 8px 0px 0px 8px !important;
+  padding-right: 0px !important;
+  padding-top: 12px;
+  padding-bottom: 12px;
+}
+
+input.form-control-simple{
+  font-family: 'iransans';
+  font-size: 14px;
+  padding-right: 8px !important;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  width: 100%;
+  border-radius: 8px;
+  border: solid 1px var(--g30);
+}
+
+.sbadge{
+  background: rgba(46, 213, 115, 0.1);
+  padding: 4px 12px;
+  color: var(--success);
+  border-radius: 500px;
+}
+
+.abadge{
+  background: rgba(255, 71 , 87, 0.1);
+  padding: 4px 12px;
+  color: var(--alert);
+  border-radius: 500px;
+}
+
+.cbadge{
+  background: rgba(255, 165, 2, 0.1);
+  padding: 4px 12px;
+  color: var(--caution);
+  border-radius: 500px;
+}
+
+body{
+  background: var(--w);
+  font-family: 'iransans';
+  height: 100vh !important;
+}
+
+.btn-menu{
+  background-color: white;
+  color: var(--g80);
+}
+
+.btn-menu:hover{
+  background-color: white;
+  border: none !important;
+  color: var(--g80);
+}
+
+.base{
+  background: var(--base) !important;
+  outline: solid 1px var(--g20) !important;
+  border-radius: 8px;
+}
+
+.base-support{
+  background: rgb(255, 165, 2, 0.2) !important;
+  border-radius: 8px !important;
+  border: solid 1px var(--caution) !important;
+  color: var(--g80) !important;
+}
+
+.btn-base{
+  background: var(--base) !important;
+  color: var(--caution) !important;
+}
+
+.btn-base:hover{
+  background: var(--caution) !important;
+  color: var(--base) !important;
+  border: solid 1px var(--base) !important;
+}
+
+.btn-base2{
+  background: var(--caution) !important;
+  border: solid 1px var(--base) !important;
+  color: var(--base) !important;
+}
+
+.btn-base2:hover{
+  background: var(--base) !important;
+  border: solid 1px var(--caution) !important;
+  color: var(--caution) !important;
+}
+
+.menubg{
+  background: var(--base) !important;
+  outline: solid 1px var(--g20) !important;
+  border-radius: 0px;
+  height: 100vh !important;
+  min-height: 500px !important;
+}
+
+.page-item{
+  background: var(--w) !important;
+}
+
+.page-item.active .page-link{
+  color: var(--primary) !important;
+  background: var(--w) !important;
+  border: solid 1px var(--primary) !important;
+}
+
+.page-link{
+  color: var(--g60);
+  background: var(--w) !important;
+  border: none !important;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+.bottom-line{
+  border-bottom: solid 1px var(--g20);
+}
+
+.strokem{
+  outline: solid 1px var(--g20) !important;
+}
+
+th{
+  font-family: 'iransans';
+  font-size: 14px;
+  font-weight: bold;
+  color: var(--g60);
+  border-bottom: solid 1px var(--g20) !important;
+}
+
+td{
+  font-family: 'iransans';
+  font-size: 16px;
+  font-weight: normal;
+  color: var(--g80);
+  border-bottom: solid 1px var(--g20) !important;
+}
+.profile-bg{
+  padding: 20px;
+  border-radius: 128px;
+  background: var(--w);
+}
+
+.calendar-problem{
+  min-width: 300px ;
+}
+
+label{
+  font-size: 12px !important;
+  font-family: 'iransans' !important;
+  color: var(--g60) !important;
+  margin-bottom: 4px !important;
+}

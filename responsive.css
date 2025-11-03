@@ -1,0 +1,31 @@
+@media (max-width: 700px) {
+  .d-non{
+    display: none;
+  }
+  .fb-16{
+    font-size: 14px !important;
+  }
+  .fb-14{
+    font-size: 12px !important;
+  }
+  button{
+    font-size: 14px !important;
+  }
+  .display-1{
+    font-size: 40px;
+  }
+  .display-2{
+    font-size: 16px;
+  }
+  td{
+    font-size: 14px;
+  }
+  th{
+    font-size: 12px;
+  }
+  .btn-type{
+    padding: 8px !important;
+    white-space: pre-wrap !important;
+  }
+
+}
